@@ -1,4 +1,4 @@
-const socket = io("http://localhost:8000");
+const socket = io("https://localhost:8000");
 //Get DOM elements in respective JS variables
 const form = document.getElementById('send-container');
 const messageInput = document.getElementById('messageInp');
