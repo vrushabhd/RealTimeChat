@@ -1,6 +1,8 @@
 ///Node server which will handle socket io connections
 require('dotenv').config()
-const io =require('socket.io')(process.env.PORT || 8000)
+const port = process.env.PORT || 8000;
+console.log(`listening at port ${port}`)
+const io =require('socket.io')(port)
 const users={};
 io.on('connection',socket =>{
     //If any new users joins,let the other users connected to the server know!
