@@ -54,8 +54,8 @@ form.addEventListener('submit', (e) => {
 
 
 //Ask new user for her/his name and let the sever Know
-
-const name = prompt("Enter your name to join");
+function myFunction(){
+const name = prompt("Enter your name to join","Random User");
 if (name) {
     socket.emit('new-user-joined', name);
     //If the new user joines let the server know
@@ -72,6 +72,7 @@ if (name) {
 
 
 
+}
 }
 //If server sends a message recieve it.
 socket.on('receive', data => {
